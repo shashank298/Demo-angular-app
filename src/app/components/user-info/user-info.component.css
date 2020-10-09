@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+}
+th {
+  text-align: left;
+  background-color: #17a2b8;
+  color: white;
+  font-size: 0.9rem;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+td {
+  font-size: 0.87rem;
+}

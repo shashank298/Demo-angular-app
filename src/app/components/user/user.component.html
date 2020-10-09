@@ -1,0 +1,76 @@
+<div class="container cnt">
+  <br />
+  <div class="wrapper">
+    <nav>
+      <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+        <a
+          class="nav-item nav-link active"
+          id="nav-form-tab"
+          data-toggle="tab"
+          href="#nav-form"
+          role="tab"
+          aria-controls="nav-form"
+          aria-selected="true"
+          >Form</a
+        >
+        <a
+          class="nav-item nav-link"
+          id="nav-data-tab"
+          data-toggle="tab"
+          href="#nav-data"
+          role="tab"
+          aria-controls="nav-data"
+          aria-selected="false"
+          >Data</a
+        >
+      </div>
+    </nav>
+    <br />
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-form"
+        role="tabpanel"
+        aria-labelledby="nav-form-tab"
+      >
+        <form class="needs-validation" #form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input
+              type="text"
+              name="userName"
+              [(ngModel)]="userName"
+              placeholder="Name"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control"
+              name="emailId"
+              [(ngModel)]="emailId"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <p class="error">{{ error }}</p>
+          <button type="submit" value="Submit" class="btn btn-info">
+            <div class="spinner-border text-dark"></div>
+            Submit
+          </button>
+        </form>
+        <br />
+      </div>
+
+      <div
+        class="tab-pane fade"
+        id="nav-data"
+        role="tabpanel"
+        aria-labelledby="nav-data-tab"
+      >
+        <app-user-info [data]="users"> </app-user-info>
+      </div>
+    </div>
+  </div>
+</div>
